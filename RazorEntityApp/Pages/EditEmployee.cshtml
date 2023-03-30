@@ -1,0 +1,16 @@
+﻿@page
+@model RazorEntityApp.Pages.EditEmployeeModel
+
+<h2>Edit Employee:</h2>
+<form method="post">
+    <input name="id" value="@Model.Employee?.Id" type="hidden" />
+    <p>
+        <label>Name:</label><br />
+        <input type="text" asp-for="@Model.Employee.Name" name="name" />
+    </p>
+    <p>
+        <label>Birth Date:</label><br />
+        <input type="date" asp-for="@Model.Employee.BirthDate" name="birthdate" />
+    </p>
+    <input type="submit" value="Save Employee" />
+</form>
